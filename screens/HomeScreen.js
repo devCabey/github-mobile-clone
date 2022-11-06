@@ -47,29 +47,30 @@ const HomeScreen = () => {
           </TouchableHighlight>
         </View>
         {/* My Work */}
-        <HomeContent topic="My Work">
+        <HomeContent topic="My Work" route="Work">
           <View className="bg-white rounded-md mt-3 pl-3 pb-1  ">
             {Data.map((e, index) => (
               <HomeNav
                 icon={e.icon}
                 name={e.name}
                 color={e.color}
+                route={e.route}
                 key={index}
               />
             ))}
           </View>
         </HomeContent>
         {/* Favorites */}
-        <HomeContent topic="Favorites">
-          <HomeEmpty buttonText="Add Favorites">
+        <HomeContent topic="Favorites" route="Favorite">
+          <HomeEmpty buttonText="Add Favorites" route="Favorite">
             <Text className="text-center font-normal ">
               Add favourite repositeries here to have {"\n"} quick access at any
               time, without having {"\n"} to search
             </Text>
           </HomeEmpty>
         </HomeContent>
-        <HomeContent topic="Shortcuts">
-          <HomeEmpty buttonText="Get Started">
+        <HomeContent topic="Shortcuts" route="Shortcut">
+          <HomeEmpty buttonText="Get Started" route="Shortcut">
             <View className="flex justify-center items-center">
               <View>{/* Icons */}</View>
               <Text className=" font-bold my-1">
@@ -82,7 +83,7 @@ const HomeScreen = () => {
             </View>
           </HomeEmpty>
         </HomeContent>
-        <HomeContent topic="Recent">
+        <HomeContent topic="Recent" route="Recent">
           <RecentItem />
         </HomeContent>
       </ScrollView>

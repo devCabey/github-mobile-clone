@@ -1,10 +1,15 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import { ChevronRightIcon } from "react-native-heroicons/outline";
+import { useNavigation } from "@react-navigation/native";
 
-const HomeNav = ({ icon, color, name }) => {
+const HomeNav = ({ icon, color, name, route }) => {
+  const navigator = useNavigation();
   return (
-    <TouchableOpacity className="flex-row  items-center pt-3 ">
+    <TouchableOpacity
+      className="flex-row  items-center pt-3 "
+      onPress={() => navigator.navigate(route)}
+    >
       <View
         className={`p-2 rounded-md mr-3 `}
         style={{ backgroundColor: color }}

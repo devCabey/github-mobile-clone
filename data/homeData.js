@@ -17,7 +17,7 @@ export default [
     name: "Pull Requests",
     icon: <Ionicons name="git-pull-request" size={18} color="white" />,
     color: "#2f92f5",
-    route: "PullRequest",
+    route: "Pull Request",
   },
   {
     name: "Discussions",
