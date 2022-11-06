@@ -49,8 +49,13 @@ const HomeScreen = () => {
         {/* My Work */}
         <HomeContent topic="My Work">
           <View className="bg-white rounded-md mt-3 pl-3 pb-1  ">
-            {Data.map((e) => (
-              <HomeNav icon={e.icon} name={e.name} color={e.color} />
+            {Data.map((e, index) => (
+              <HomeNav
+                icon={e.icon}
+                name={e.name}
+                color={e.color}
+                key={index}
+              />
             ))}
           </View>
         </HomeContent>
