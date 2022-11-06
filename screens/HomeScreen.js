@@ -25,6 +25,7 @@ const HomeScreen = () => {
   useLayoutEffect(() => {
     navigation.setOptions({
       headerShown: false,
+      headerRight: () => <AddHeaderButton />,
     });
   }, []);
 
