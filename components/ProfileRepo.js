@@ -1,6 +1,6 @@
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import React from "react";
-import { AntDesign } from "@expo/vector-icons";
+import { AntDesign, Octicons } from "@expo/vector-icons";
 
 const ProfileRepo = () => {
   return (
@@ -31,7 +31,7 @@ const ProfileRepo = () => {
           <Text className="text-gray-500">0</Text>
         </View>
         <View className="flex-row space-x-1 items-center">
-          <AntDesign name="star" size={14} color="#9a9a9a" />
+        <Octicons name="dot-fill" size={20} color="#f7bb05" />
           <Text className="text-gray-500">JavaScript</Text>
         </View>
       </View>
