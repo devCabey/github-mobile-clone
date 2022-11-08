@@ -28,7 +28,7 @@ export default [
   {
     name: "Repositories",
     icon: <Feather name="book" size={18} color="white" />,
-    color: "#716f73",
+    color: "#2b2b2b",
     route: "Repository",
   },
   {
