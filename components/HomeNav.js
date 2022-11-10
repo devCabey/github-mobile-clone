@@ -17,7 +17,7 @@ const HomeNav = ({ icon, color, name, route, length }) => {
         {icon}
       </View>
       <View className="flex-1 flex-row  border-gray-300 border-b pb-4 items-center  space-x-2">
-        <Text className="flex-1 " style={{ fontSize: 16 }}>
+        <Text className="flex-1 " style={{ fontSize: 15 }}>
           {name}
         </Text>
         {length ? (
