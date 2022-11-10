@@ -30,19 +30,20 @@ const HomeScreen = () => {
   }, []);
 
   return (
-    <SafeAreaView className="pb-5">
+    <SafeAreaView className="flex-1 pb-10">
       <ScrollView>
         {/* Header */}
         <View>
           <Text className="text-3xl font-extrabold ml-5 text-gray-800">
             Home
           </Text>
-          <TouchableHighlight className="flex-row items-center mx-5 bg-gray-200 rounded-lg px-1 mt-2">
-            <View className="flex-row items-center justify-center ">
+          <TouchableHighlight className="flex-row items-center mx-5 bg-[#cfcfcf] rounded-xl px-2 mt-2 ">
+            <View className="flex-row items-center space-x-2 ">
               <MagnifyingGlassIcon size={23} color="#9b9c9e" />
               <TextInput
-                className="h-11 px-2 text-center "
+                className="h-11 flex-1 text-gray-700  "
                 placeholder="Search GitHub"
+                style={{ fontSize: 15 }}
               />
             </View>
           </TouchableHighlight>
