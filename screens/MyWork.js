@@ -22,26 +22,21 @@ const MyWork = () => {
     });
   }, []);
 
-  const renderItem = ({ item }) => (
-    <MyWorkItem
-      icon={item.icon}
-      color={item.color}
-      title={item.name}
-      key={item.id}
-      id={item.id}
-    />
-  );
-
   return (
-    <View className="flex-1 px-6 pt-10">
-      <View>
-        <FlatList
-          renderItem={renderItem}
-          data={HomeData}
-          keyExtractor={(item) => item.id}
-          className="border rounded-lg border-gray-300 shadow-md"
-        />
-      </View>
+    <View>
+      <ScrollView  className="flex-1 px-6 pt-10">
+        <View className="border rounded-lg p-1 bg-white border-gray-300 shadow-lg shadow-gray-600">
+          {HomeData.map((item) => (
+            <MyWorkItem
+              key={item.id}
+              icon={item.icon}
+              color={item.color}
+              title={item.name}
+              id={item.id}
+            />
+          ))}
+        </View>
+      </ScrollView>
     </View>
   );
 };
