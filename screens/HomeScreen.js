@@ -30,8 +30,8 @@ const HomeScreen = () => {
   }, []);
 
   return (
-    <SafeAreaView className="flex-1 pb-10">
-      <ScrollView>
+    <SafeAreaView >
+      <ScrollView className="flex-1">
         {/* Header */}
         <View>
           <Text className="text-3xl font-extrabold ml-5 text-gray-800">
