@@ -20,12 +20,23 @@ const Notification = () => {
           <View className="px-5  py-3 ">
             <Text className="text-3xl font-bold">Inbox</Text>
             <ScrollView className="flex-row mt-3  " horizontal>
-              <NotificationNav title="Inbox" showChevron={true} />
-              <NotificationNav title="Unread" showChevron={false} />
-              <NotificationNav title="Repository" showChevron={true} />
+              <NotificationNav title="Inbox" showChevron={true} route="Inbox" />
+              <NotificationNav
+                title="Unread"
+                showChevron={false}
+                route="NUnread"
+              />
+              <NotificationNav
+                title="Repository"
+                showChevron={true}
+                route="NRepository"
+              />
             </ScrollView>
           </View>
-          <View className=" border-y mt-1 pt-1 border-gray-500">
+          <View className=" border-y mt-1 pt-1 border-b-gray-300 border-t-gray-500">
+            <NotificationItem />
+            <NotificationItem />
+            <NotificationItem />
             <NotificationItem />
             <NotificationItem />
           </View>

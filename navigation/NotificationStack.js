@@ -12,9 +12,11 @@ const NotificationStack = () => {
   return (
     <Stack.Navigator initialRouteName="Notification">
       <Stack.Screen component={Notification} name="Notification" />
-      <Stack.Screen component={InboxModal} name="Inbox" />
-      <Stack.Screen component={NotificationRepository} name="NRepository" />
       <Stack.Screen component={NotificationUnread} name="NUnread" />
+      <Stack.Group screenOptions={{ presentation: "modal" }}>
+        <Stack.Screen component={InboxModal} name="Inbox" />
+        <Stack.Screen component={NotificationRepository} name="NRepository" />
+      </Stack.Group>
     </Stack.Navigator>
   );
 };
