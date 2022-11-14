@@ -6,7 +6,7 @@ import FilterComponent from "../components/FilterComponent";
 const InboxModal = () => {
   const navigator = useNavigation();
 
-  const [selector, setSelector] = useState(null);
+  const [selector, setSelector] = useState("");
 
   useLayoutEffect(() => {
     navigator.setOptions({
@@ -18,9 +18,9 @@ const InboxModal = () => {
   }, []);
   return (
     <View className="bg-white flex-1">
-      <FilterComponent title="Inbox" key={1} select={true} />
-      <FilterComponent title="Saved" />
-      <FilterComponent title="Done" />
+      <FilterComponent title="Inbox" select={selector} />
+      <FilterComponent title="Saved" select={selector} />
+      <FilterComponent title="Done" select={selector} />
     </View>
   );
 };
