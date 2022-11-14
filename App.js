@@ -40,6 +40,7 @@ export default function App() {
             component={NotificationStack}
             name="NotificationStack"
             options={{
+              title: "Notifications",
               tabBarIcon: ({ focused, color, size }) =>
                 focused ? (
                   <Ionicons
