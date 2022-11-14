@@ -1,5 +1,5 @@
 import { View, Text, SafeAreaView, Image, ScrollView } from "react-native";
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import ProfileTop from "../components/ProfileTop";
 import {
@@ -14,11 +14,14 @@ import ProfileRepo from "../components/ProfileRepo";
 
 const Profile = () => {
   const navigator = useNavigation();
-  navigator.setOptions({
-    headerShown: true,
-    headerTitle: "",
-    headerRight: () => <ProfileTop />,
-  });
+
+  useLayoutEffect(() => {
+    navigator.setOptions({
+      headerShown: true,
+      headerTitle: "",
+      headerRight: () => <ProfileTop />,
+    });
+  }, []);
   return (
     <SafeAreaView className="relative">
       <ScrollView className="flex-1">

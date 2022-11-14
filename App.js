@@ -2,15 +2,11 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { TailwindProvider } from "tailwindcss-react-native";
 import HomeStack from "./navigation/HomeStack";
-import Notification from "./screens/Notification";
-import {
-  FontAwesome5,
-  Ionicons,
-  MaterialIcons,
-  Octicons,
-} from "@expo/vector-icons";
+
+import { FontAwesome5, Ionicons, Octicons } from "@expo/vector-icons";
 import Explore from "./screens/Explore";
 import Profile from "./screens/Profile";
+import NotificationStack from "./navigation/NotificationStack";
 
 // Screens
 
@@ -41,8 +37,8 @@ export default function App() {
             }}
           />
           <Tab.Screen
-            component={Notification}
-            name="Notification"
+            component={NotificationStack}
+            name="NotificationStack"
             options={{
               tabBarIcon: ({ focused, color, size }) =>
                 focused ? (
