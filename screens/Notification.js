@@ -8,7 +8,7 @@ const Notification = () => {
   const navigator = useNavigation();
   useLayoutEffect(() => {
     navigator.setOptions({
-      headerLeft: () => <Button title="Select" className="ml-5" />,
+      headerLeft: () => <Button title="Select"  />,
       headerTitle: "",
       headerShown: true,
     });
