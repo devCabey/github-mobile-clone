@@ -1,10 +1,16 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
-const NotificationItem = () => {
+const NotificationItem = ({ data }) => {
+  const navigator = useNavigation();
+
   return (
-    <TouchableOpacity className="flex-row space-x-4 mx-5 justify-center">
+    <TouchableOpacity
+      className="flex-row space-x-4 mx-5 justify-center"
+      onPress={() => navigator.navigate("NContent", data)}
+    >
       <Ionicons name="md-git-merge-outline" size={24} color="#7930f0" />
       <View className="flex-row flex-1 border-b border-gray-500 pb-2">
         <View className="flex-1 space-y-1">
